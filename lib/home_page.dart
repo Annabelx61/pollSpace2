@@ -1,15 +1,18 @@
+// https://pub.dev/packages/flutter_polls
+// -> The base for the code
+
 import 'package:flutter_application_1/polls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_polls/flutter_polls.dart';
 
 class Polls extends StatefulWidget {
-  const Polls({Key? key}) : super(key: key);
+  const Polls({super.key});
 
   @override
-  State<Polls> createState() => _ExamplePollsState();
+  State<Polls> createState() => _PollsState();
 }
 
-class _ExamplePollsState extends State<Polls> {
+class _PollsState extends State<Polls> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +39,8 @@ class _ExamplePollsState extends State<Polls> {
                 ))
                 .inDays;
 
-            bool hasVoted = poll['hasVoted'] ?? false;
+            // To check whether the user has voted
+            bool hasVoted = poll['hasVoted'] ?? false; 
 
             return Container(
               margin: const EdgeInsets.only(bottom: 20),
@@ -51,6 +55,8 @@ class _ExamplePollsState extends State<Polls> {
                   /// If HTTP status is success, return true else false
                   return true;
                 },
+
+                // If the date for the voting is over 
                 pollEnded: days < 0,
                 pollTitle: Align(
                   alignment: Alignment.centerLeft,
@@ -62,7 +68,9 @@ class _ExamplePollsState extends State<Polls> {
                     ),
                   ),
                 ),
+
                 pollOptions: List<PollOption>.from(
+                  // Each item is a map with the following keys: id, title, image and votes.
                   poll['options'].map(
                     (option) => PollOption(
                       id: option['id'].toString(),
@@ -94,7 +102,7 @@ class _ExamplePollsState extends State<Polls> {
                 ),
                 metaWidget: Row(
                   children: [
-                    const SizedBox(width: 6),
+                    const SizedBox(width: 15),
                     const Text(
                       '•',
                     ),

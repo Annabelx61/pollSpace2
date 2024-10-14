@@ -1,9 +1,9 @@
-
+// This is where the list of polls are located
 List polls = [
   {
     'id': 1,
     'question':
-        'Which season is the best?',
+        '1. Which season is the best?',
     'end_date': DateTime(2025, 11, 21),
     'options': [
       {
