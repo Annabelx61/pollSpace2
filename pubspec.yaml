@@ -73,6 +73,10 @@ flutter:
     - lib/assets/gorilla_vs_bear/bear.jpg
     - lib/assets/gorilla_vs_bear/gorilla.jpg
 
+    - lib/assets/rock/rock1.jpg
+    - lib/assets/rock/rock2.jpg
+    - lib/assets/rock/therock.jpg
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

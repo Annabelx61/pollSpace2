@@ -79,32 +79,32 @@ List polls = [
         'votes': 10,
       }
     ],
-    // },
-    // {
-    //     'id': 4,
-    //     'question':'What's the best name for a pet rock?',
-    //     'end_date': DateTime(2025, 04, 30),
-    //     'options': [
-    //       {
-    //        'id': 1,
-    //       'title': 'Dwayne "The Rock"!',
-    //         'image': 'lib/assets/rock/therock.jpg',
-    //        'votes': 1,
-    //      },
-    //      {
-    //        'id': 2,
-    //        'title': 'Pebbles',
-    //        'image': 'lib/assets/rock/rock1.jpg',
-    //        'votes': 0,
-    //      },
-    //       {
-    //        'id': 3,
-    //        'title': 'Rolling Stone',
-    //         'image': 'lib/assets/rock/rock2.jpg',
-    //        'votes': 0,
-    //      },
-    //    ],
-    //    'hasVoted': true,
+  },
+  {
+    'id': 4,
+    'question': 'What is the best name for a pet rock?',
+    'end_date': DateTime(2025, 04, 30),
+    'options': [
+      {
+        'id': 1,
+        'title': 'Dwayne "The Rock"!',
+        'image': 'lib/assets/rock/therock.jpg',
+        'votes': 1,
+      },
+      {
+        'id': 2,
+        'title': 'Pebbles',
+        'image': 'lib/assets/rock/rock1.jpg',
+        'votes': 0,
+      },
+      {
+        'id': 3,
+        'title': 'Rolling Stone',
+        'image': 'lib/assets/rock/rock2.jpg',
+        'votes': 0,
+      },
+    ],
+    //   'hasVoted': true,
     //    'userVotedOptionId': 1,
   }
 ];
