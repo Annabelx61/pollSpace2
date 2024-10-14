@@ -65,6 +65,14 @@ flutter:
     - lib/assets/seasons/summer.jpg
     - lib/assets/seasons/winter.jpg
 
+    - lib/assets/superpower/teleport.jpg
+    - lib/assets/superpower/strength.jpg
+    - lib/assets/superpower/flying.jpg
+    - lib/assets/superpower/invisible.jpg
+
+    - lib/assets/gorilla_vs_bear/bear.jpg
+    - lib/assets/gorilla_vs_bear/gorilla.jpg
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
