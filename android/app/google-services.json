@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "463241467026",
+    "project_id": "pollspace-d2025",
+    "storage_bucket": "pollspace-d2025.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463241467026:android:fce9fd41ec34c0c90a024b",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjYqCJ642o6XWYU0Q1svAYARHAgNo0Euo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
