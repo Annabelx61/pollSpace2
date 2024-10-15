@@ -38,6 +38,10 @@ dependencies:
   firebase_core: ^3.6.0
   flutter_polls: ^0.1.6
   lib: ^0.0.3
+  provider: ^6.1.2
+  cloud_firestore: ^5.4.4
+  firebase_auth: ^5.3.1
+  firebase_ui_auth: ^1.16.0
 
 dev_dependencies:
   flutter_test:
