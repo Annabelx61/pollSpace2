@@ -1,6 +1,6 @@
 # Poll_Space
 
-PollSpace is an app designed to engage users in polls on various topics. The app features pre-made polls, and a user login through FireBase so that polling results can be recorded and shared between users.
+PollSpace is an app designed to engage users in polls on various topics. The app features pre-made polls, and a user login through FireBase so that polling results can be recorded and shared between users. The audience in this app would be those interested in seeing there interests compared to others, and seeing the publics opinion on relevant issues. Those who like apps like Wishbone would be our target audience. 
 
 Screenshots:
 
