@@ -35,6 +35,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+<<<<<<< Updated upstream
   firebase_core: ^3.6.0
   flutter_polls: ^0.1.6
   lib: ^0.0.3
@@ -66,11 +67,17 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
   assets:
     - lib/assets/seasons/autumn.jpeg
     - lib/assets/seasons/fall.jpg
     - lib/assets/seasons/summer.jpg
     - lib/assets/seasons/winter.jpg
+<<<<<<< Updated upstream
 
     - lib/assets/superpower/teleport.jpg
     - lib/assets/superpower/strength.jpg
@@ -83,6 +90,9 @@ flutter:
     - lib/assets/rock/rock1.jpg
     - lib/assets/rock/rock2.jpg
     - lib/assets/rock/therock.jpg
+=======
+>>>>>>> origin/main
+>>>>>>> Stashed changes
 
   # To add assets to your application, add an assets section, like this:
   # assets:
