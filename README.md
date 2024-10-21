@@ -1,18 +1,31 @@
 # Poll_Space
 
-PollSpace is an app designed to engage users in polls on various topics. The app features pre-made polls, and a user login through FireBase so that polling results can be recorded and shared between users. The audience in this app would be those interested in seeing there interests compared to others, and seeing the publics opinion on relevant issues. Those who like apps like Wishbone would be our target audience. 
+PollSpace is an app designed to engage users in polls on various topics. The app features pre-made polls, and a user login through Firebase so that polling results can be recorded and shared between users. The audience for this app includes those interested in comparing their interests with others and seeing the public's opinion on relevant issues. Our target audience is similar to those who enjoy apps like Wishbone.
 
-Screenshots:
+## Features
 
--> sign in page
+- **User Authentication**: Users can sign in using Firebase authentication, allowing them to track their responses and engage with the community.
+- **Polls on Various Topics**: PollSpace offers a wide range of pre-made polls on trending and interesting subjects.
+- **Result Sharing**: Users can see how their votes compare to others and view overall poll results.
+
+## Target Audience
+
+- People interested in comparing their interests to others.
+- Those who want to see public opinions on various relevant issues.
+- Users who enjoy similar apps like **Wishbone**.
+
+## Screenshots
+
+### Sign-In Page
+
 ![sign-in page](https://github.com/user-attachments/assets/4cf58883-0ea5-4b37-92b2-89fd410cbb23)
 
--> sign in button 
+### Sign-In Button
+
 ![sign-in](https://github.com/user-attachments/assets/26baf3bd-f436-4296-b7f9-467ba78524c9)
 
--> questions with voting poll
+### Poll Questions with Voting Options
+
 ![poll1](https://github.com/user-attachments/assets/3793787e-f6d6-41e6-b4e9-ba684c301c63)
+
 ![poll2](https://github.com/user-attachments/assets/76066dd2-c4ac-40de-8ec7-edb303bb9305)
-
-
-
