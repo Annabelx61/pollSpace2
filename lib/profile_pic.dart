@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ProfilePicture extends StatelessWidget {
   const ProfilePicture({super.key});
@@ -20,5 +21,14 @@ class ProfilePicture extends StatelessWidget {
         ),
     );
   }
-  void onProfileTapped() {}
+  Future<void> onProfileTapped() async {
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+    if (image == null) return;
+
+    final storageRef = FirebaseStorage.instance.ref();
+    final imageRef = storageRef.child("user_1.jpg");
+  }
+
+
 }
