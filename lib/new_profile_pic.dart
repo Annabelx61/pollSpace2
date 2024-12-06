@@ -15,6 +15,7 @@ class _MyAppState extends State<MyApp> {
   File? _imageFile;
   String? _downloadURL;
   
+  // received help from https://www.youtube.com/watch?v=9YrNrDZ3hP8&t=828s
   // at 7 min in video to look back below
   Future<void> _pickImage() async{
     final pickedFile = await ImagePicker()
