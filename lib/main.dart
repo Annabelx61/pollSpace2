@@ -1,15 +1,18 @@
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/new_profile_pic.dart';
 import 'home_page.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:go_router/go_router.dart';              
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';                
-import 'app_state.dart';                                
+import 'app_state.dart';   
+
+
  
  
 Future<void> main() async {
-  // Modify from here...
   WidgetsFlutterBinding.ensureInitialized();
  
   if (Firebase.apps.isEmpty) {
@@ -20,7 +23,6 @@ Future<void> main() async {
     create: (context) => ApplicationState(),
     builder: ((context, child) => const App()),
   ));
-  // ...to here.
 }
  
 final _router = GoRouter(
@@ -83,13 +85,12 @@ final _router = GoRouter(
         GoRoute(
           path: 'profile',
           builder: (context, state) {
-            return ProfileScreen(
-              providers: const [],
-              actions: [
-                SignedOutAction((context) {
-                  context.pushReplacement('/');
-                }),
-              ],
+            return Scaffold(
+              body: Align(
+                child: Center(
+                  child: MyApp(),
+                ),
+              )
             );
           },
         ),
