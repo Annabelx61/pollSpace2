@@ -9,14 +9,16 @@ import 'firebase_options.dart';
 
 class ApplicationState extends ChangeNotifier {
 
+  Map<String, String> votedPolls = {};
+
   // Method to check if the user has voted
   bool hasVoted(String pollId) {
-    return _votedPolls.containsKey(pollId);
+    return votedPolls.containsKey(pollId);
   }
 
   // Method to record a user's vote
   void setVoted(String pollId, String optionId) {
-    _votedPolls[pollId] = optionId;
+    votedPolls[pollId] = optionId;
     notifyListeners();
     _saveVoteToFirestore(pollId, optionId);
   }
@@ -54,33 +56,43 @@ class ApplicationState extends ChangeNotifier {
 
   // loads previous user voting history from firebase
   Future<void> _loadUserVotes(String userId) async {
-    final snapshot = await FirebaseFirestore.instance
-        .collection('users')
-        .doc(userId)
-        .collection('votes')
-        .get();
-
-    for (var doc in snapshot.docs) {
-      _votedPolls[doc.id] = doc.data()['optionId'] as String;
-    }
-    notifyListeners();
-  }
-
-  // Method to saves a user's vote in the firebase
-  Future<void> _saveVoteToFirestore(String pollId, String optionId) async {
-    final user = FirebaseAuth.instance.currentUser;
-
-    if (user != null) {
-      await FirebaseFirestore.instance
-          .collection('users')
-          .doc(user.uid)
+    try {
+      final snapshot = await FirebaseFirestore.instance
           .collection('votes')
-          .doc(pollId)
+          .doc(userId)
+          .collection('userVotes')
+          .get();
+
+      // Update local votedPolls map
+      for (var doc in snapshot.docs) {
+        votedPolls[doc['pollId']] = doc['optionId'];
+      }
+
+      notifyListeners();
+    } catch (e) {
+      print('Error loading votes: $e');
+    }
+  } // load everyone's vote
+
+  // Save the user's vote to Firestore
+  void _saveVoteToFirestore(String pollId, String optionId) {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      FirebaseFirestore.instance
+          .collection('votes')
+          .doc(user.uid)
+          .collection('userVotes')
+          .doc(pollId) // Using pollId as document ID
           .set({
+        'pollId': pollId,
         'optionId': optionId,
-        'timestamp': DateTime.now().millisecondsSinceEpoch,
       });
     }
+  }
+
+  void setLoggedIn(bool value) {
+    _loggedIn = value;
+    notifyListeners(); // Notify listeners to rebuild the UI when state changes
   }
 
   Future<DocumentReference> addMessageToGuestBook(String message) {
@@ -98,3 +110,4 @@ class ApplicationState extends ChangeNotifier {
     });
   }
 }
+

@@ -1,51 +1,26 @@
 {
   "project_info": {
-    "project_number": "463241467026",
-    "project_id": "pollspace-d2025",
-    "storage_bucket": "pollspace-d2025.appspot.com"
+    "project_number": "871995772520",
+    "project_id": "pollspace-f29ec",
+    "storage_bucket": "pollspace-f29ec.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:463241467026:android:fce9fd41ec34c0c90a024b",
+        "mobilesdk_app_id": "1:871995772520:android:d24193467de63e5c5d35dd",
         "android_client_info": {
           "package_name": "com.example.flutter_application_1"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "463241467026-92grdmome11q60hs8bbb5o8ck2kefscv.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.flutter_application_1",
-            "certificate_hash": "ac252abc75f91ef42d2ab10378be52459281de39"
-          }
-        },
-        {
-          "client_id": "463241467026-sn454ullmdfenv233orkjq14plqkb3os.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCjYqCJ642o6XWYU0Q1svAYARHAgNo0Euo"
+          "current_key": "AIzaSyAC87LiKsmJtmiQcu81nwY0eDArbODvmGI"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "463241467026-sn454ullmdfenv233orkjq14plqkb3os.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "463241467026-6s68oaekfc40q834tkr6b16gc290oki9.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.flutterApplication1"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
