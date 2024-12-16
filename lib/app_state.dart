@@ -16,6 +16,11 @@ class ApplicationState extends ChangeNotifier {
     return votedPolls.containsKey(pollId);
   }
 
+  void clearVoteStatus() {
+    _votedPolls.clear();  // Assuming _votedPolls is where you store the voted polls
+    notifyListeners();
+  }
+
   // Method to record a user's vote
   void setVoted(String pollId, String optionId) {
     votedPolls[pollId] = optionId;

@@ -28,7 +28,7 @@ final _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const Polls(),
+      builder: (context, state) => PollPage(),
       routes: [
         GoRoute(
           path: 'sign-in',
