@@ -6,24 +6,34 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('Poll displays correct question', (WidgetTester tester) async {
+    // Build the app with mock poll data.
+    await tester.pumpWidget(const App());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that the question "Do you like Flutter?" is displayed.
+    expect(find.text('Do you like Flutter?'), findsOneWidget);
+  });
+  testWidgets('Vote button is visible for options', (WidgetTester tester) async {
+    // Build the app with mock poll data.
+    await tester.pumpWidget(const App());
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    // Verify that the vote button is displayed next to each poll option.
+    expect(find.widgetWithText(ElevatedButton, 'Vote'), findsNWidgets(2)); // Assuming 2 options are present.
+  });
+  testWidgets('Vote count updates when user votes', (WidgetTester tester) async {
+    // Build the app with mock poll data.
+    await tester.pumpWidget(const App());
+
+    // Tap the 'Yes' option to cast a vote.
+    await tester.tap(find.text('Yes'));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that the vote count has increased for the "Yes" option.
+    expect(find.text('Votes: 1'), findsOneWidget);  // Assuming "Yes" has 1 vote after tapping.
   });
 }
+
