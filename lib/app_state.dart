@@ -17,7 +17,7 @@ class ApplicationState extends ChangeNotifier {
   }
 
   void clearVoteStatus() {
-    _votedPolls.clear();  // Assuming _votedPolls is where you store the voted polls
+    _votedPolls.clear();  
     notifyListeners();
   }
 
@@ -27,6 +27,7 @@ class ApplicationState extends ChangeNotifier {
     notifyListeners();
     _saveVoteToFirestore(pollId, optionId);
   }
+
 
   ApplicationState() {
     init();
@@ -87,7 +88,7 @@ class ApplicationState extends ChangeNotifier {
           .collection('votes')
           .doc(user.uid)
           .collection('userVotes')
-          .doc(pollId) // Using pollId as document ID
+          .doc(pollId)
           .set({
         'pollId': pollId,
         'optionId': optionId,
@@ -97,7 +98,7 @@ class ApplicationState extends ChangeNotifier {
 
   void setLoggedIn(bool value) {
     _loggedIn = value;
-    notifyListeners(); // Notify listeners to rebuild the UI when state changes
+    notifyListeners();
   }
 
   Future<DocumentReference> addMessageToGuestBook(String message) {

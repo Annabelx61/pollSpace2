@@ -21,7 +21,7 @@ class _PollPageState extends State<PollPage> {
   @override
   void initState() {
     super.initState();
-    // Listen to auth state changes (sign-in / sign-out)
+
     _auth.authStateChanges().listen((currentUser) {
       setState(() {
         user = currentUser;
@@ -31,18 +31,17 @@ class _PollPageState extends State<PollPage> {
 
   // Handle casting a vote for a poll option
   Future<void> _castVote(String pollId, String optionId) async {
-    if (user == null) return; // Make sure the user is logged in before allowing a vote
+    if (user == null) return; 
 
     // Check if the user has already voted for this poll
     final userVoteRef = _firestore.collection('polls').doc(pollId).collection('userVotes').doc(user!.uid);
     final userVoteSnapshot = await userVoteRef.get();
 
     if (userVoteSnapshot.exists) {
-      // User has already voted, so prevent further voting
+      // prevent further voting
       return;
     }
 
-    // Otherwise, cast the vote for the option
     final optionRef = _firestore.collection('polls').doc(pollId).collection('option').doc(optionId);
     final optionSnapshot = await optionRef.get();
     final currentVotes = optionSnapshot.data()?['votes'] ?? 0;
