@@ -25,7 +25,4 @@ PollSpace is an app designed to engage users in polls on various topics. The app
 ![sign-in](https://github.com/user-attachments/assets/26baf3bd-f436-4296-b7f9-467ba78524c9)
 
 ### Poll Questions with Voting Options
-
-![poll1](https://github.com/user-attachments/assets/3793787e-f6d6-41e6-b4e9-ba684c301c63)
-
-![poll2](https://github.com/user-attachments/assets/76066dd2-c4ac-40de-8ec7-edb303bb9305)
+![image](https://github.com/user-attachments/assets/2bd5fdf2-60c7-4ca8-9f83-ff9dbd512038)
